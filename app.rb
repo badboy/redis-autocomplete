@@ -6,7 +6,7 @@ require "redic"
 require "json"
 
 def redis
-  Redic.new
+  Redic.new(ENV['REDISTOGO_URL'] || ENV['REDIS_URL'] || "redis://localhost:6379")
 end
 
 AUTOCOMPLE_KEY = "autocomplete"
