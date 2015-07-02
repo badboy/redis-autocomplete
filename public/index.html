@@ -23,11 +23,11 @@
 <body>
 <div style="width:800px">
 <h3>Redis ZRANGEBYLEX demo</h3>
-<b>WARNING:</b> The demo is turned off currently for lack of free memory in the small VPS used by the redis.io web site. We plan to activate it at least in a reduced form in the next days.<br><br>
 This is a demo of the new <a href="http://redis.io/commands/zrangebylex">ZRANGEBYLEX</a> Redis command. It autocompletes the <i>query</i> field using all the <b>1514 unique function names of the Redis source code</b> as autocompletion dictionary.
 <br><br>
 Every time the user types something, the page sends a request to a small Ruby snippet, which sends a query to Redis and returns the result to the web page as a JSON array.<br>
 As you type in the input field below, you'll see the list of suggestions appearing.
+Try <em>set</em> for example.
 <br><br>
 The javascript was adapted from an example taken from <a href="http://jqueryui.com/autocomplete/#remote">JQuery Autocomplete</a>.
 
@@ -40,7 +40,7 @@ The javascript was adapted from an example taken from <a href="http://jqueryui.c
 
 <h3>Additional info</h3>
 
-The code is available <a href="#foo">in a Gist.</a>
+The code is available <a href="https://github.com/badboy/redis-autocomplete">in a Repository</a>.
 </div>
 </body>
 </html>
