@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redis Autocomplete</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <style>
+  .ui-autocomplete-loading {
+    background: yellow;
+  }
+  </style>
+  <script>
+  $(function() {
+    $( "#query" ).autocomplete({
+      source: "search",
+      minLength: 1
+    });
+  });
+  </script>
+</head>
+<body>
+<div style="width:800px">
+<h3>Redis ZRANGEBYLEX demo</h3>
+<b>WARNING:</b> The demo is turned off currently for lack of free memory in the small VPS used by the redis.io web site. We plan to activate it at least in a reduced form in the next days.<br><br>
+This is a demo of the new <a href="http://redis.io/commands/zrangebylex">ZRANGEBYLEX</a> Redis command. It autocompletes the <i>query</i> field using all the <b>1514 unique function names of the Redis source code</b> as autocompletion dictionary.
+<br><br>
+Every time the user types something, the page sends a request to a small Ruby snippet, which sends a query to Redis and returns the result to the web page as a JSON array.<br>
+As you type in the input field below, you'll see the list of suggestions appearing.
+<br><br>
+The javascript was adapted from an example taken from <a href="http://jqueryui.com/autocomplete/#remote">JQuery Autocomplete</a>.
+
+<br><br><br>
+ 
+<div class="ui-widget">
+  <label for="query">Query: </label>
+  <input id="query">
+</div>
+
+<h3>Additional info</h3>
+
+The code is available <a href="#foo">in a Gist.</a>
+</div>
+</body>
+</html>
